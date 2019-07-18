@@ -10,7 +10,7 @@ function inputNumber(text) {
 	let number;
 	do { 
 		number = prompt('введите ' + text, '');
-	} while (isNaN(number) || (number == null) || (number == '') );
+	} while ( isNaN(number) || (number == null) || (number == '') );
 	return number;
 }
 
