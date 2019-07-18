@@ -6,28 +6,28 @@
 const OPERATOR_TRUE = '+-/*';
 
 // Функция ввода числа
-function inputNumber(text){
+function inputNumber(text) {
 	let number;
-	do{ 
+	do { 
 		number = prompt('введите ' + text, '');
-	}while (isNaN(number) || (number == null) || (number == '') );
+	} while (isNaN(number) || (number == null) || (number == '') );
 	return number;
 }
 
 // Функция проверки корректности оператора
-function isOperator(text){
+function isOperator(text) {
 	if ( (text.length == 1) && (OPERATOR_TRUE.indexOf(text) >= 0) ) 
 		return true;
 	return false;
 }
 
 // Функция ввода оператора
-function inputOperator(text){
+function inputOperator(text) {
 	let oper;
-	do{ 
+	do { 
 		oper = prompt('введите ' + text, '');
 		oper = oper.trim();
-	}while ( (!isOperator(oper)) || (oper == null) || (oper == '') );
+	} while ( (!isOperator(oper)) || (oper == null) || (oper == '') );
 	return oper;
 }
 
@@ -39,25 +39,24 @@ let operator = inputOperator('оператор [+-/*]');
 switch(operator){
 	case '+':
 		alert(+number1 + +number2);
-	break;
+		break;
 	
 	case '-':
 		alert(+number1 - +number2);
-	break;
+		break;
 	
 	case '/':
 		if (+number2 != 0)
 			alert(+number1 / +number2);
 		else
 			alert('Деление на 0 !!!');
-	break;
+		break;
 	
 	case '*':
 		alert(+number1 * +number2);
-	break;	
+		break;	
 	
 	default:
 		alert('ERROR ?!');
-	break;
 }
 
