@@ -16,9 +16,7 @@ function inputNumber(text) {
 
 // Функция проверки корректности оператора
 function isOperator(text) {
-	if ( (text.length == 1) && (OPERATOR_TRUE.indexOf(text) >= 0) ) 
-		return true;
-	return false;
+	return ( (text.length == 1) && (OPERATOR_TRUE.indexOf(text) >= 0) ) 
 }
 
 // Функция ввода оператора
@@ -36,7 +34,7 @@ let number1 = inputNumber('1 число');
 let number2 = inputNumber('2 число');
 let operator = inputOperator('оператор [+-/*]');
 
-switch(operator){
+switch(operator) {
 	case '+':
 		alert(+number1 + +number2);
 		break;
