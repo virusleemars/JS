@@ -16,7 +16,7 @@ function inputNumber(text) {
 
 // Функция проверки корректности оператора
 function isOperator(text) {
-	return ( (text.length == 1) && (OPERATOR_TRUE.indexOf(text) >= 0) ) 
+	return ( (text.length == 1) && (OPERATOR_TRUE.indexOf(text) >= 0) ); 
 }
 
 // Функция ввода оператора
